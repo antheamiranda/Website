@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Weather</title>
+</head>
+
+<body>
+<h1>&#127780 Weather Station &#127780</h1>
+
+<button type="button" onclick="my_first_function()">Temperature in Celsius</button>
+<button type="button" onclick="my_scnd_function()">Temperature in Fahrenheit</button>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+	function my_first_function(){
+		document.getElementById("demo").innerHTML="The temperature is " + Math.round(toCelsius(191)) + " Celsius";
+	} 
+	function toCelsius(fahrenheit){
+		return (5/9) * (fahrenheit-32);
+	} 
+	function my_scnd_function(){
+		document.getElementById("demo").innerHTML="The temperature is " + Math.round(toFahrenheit(88)) + " Fahrenheit";
+	} 
+	function toFahrenheit(celsius){
+		return (celsius*9/5)+32;
+	} 
+</script>
+</body>
+</html>
